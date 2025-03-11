@@ -1,0 +1,13 @@
+#!/bin/bash
+read -p "Enter yes or no: " ANSWER # -p jest do wprowadzania danych
+case "$ANSWER" in # case jest do porównywania wartości
+	[yY] | [yY][eE][sS]) # [yY] - oznacza, że litera y lub Y
+		echo "You answered yes."
+		;;
+	[nN] | [nN][oO]) # [nN] - oznacza, że litera n lub N
+		echo "You answered no."
+		;;
+	*) # * - oznacza, że wszystko inne
+		echo "Invalid answer."
+		;;
+esac
