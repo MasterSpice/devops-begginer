@@ -1,0 +1,6 @@
+#1/bin/bash
+read -p "Enter the number of lines to display from /etc/passwd: " lines # Prompt the user to enter the number of lines to display from /etc/passwd
+if [[ ! "$lines" =~ ^[0-9]+$ || "$lines" -le 0 ]]; then  # Check if the input is a positive number, le means less than or equal to
+    echo "Invalid input. Please enter a positive number." # Display an error message if the input is invalid
+    exit 1
+fi
