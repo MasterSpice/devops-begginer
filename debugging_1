@@ -1,0 +1,6 @@
+#!/bin/bash
+set -ex         # -e: exit on error, -x: print command before executing
+ls /             # list files in root directory
+ls /nonexistent_directory       # list files in nonexistent directory
+ls /home         # list files in home directory, but will not be executed because of the previous error
+echo "This line will not be printed"       # this line will not be executed because of the previous error
