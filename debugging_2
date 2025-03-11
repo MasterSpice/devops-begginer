@@ -1,0 +1,6 @@
+#!/bin/bash
+set -x # Print commands and their arguments
+ls /    # List root directory
+ls /nonexistent_directory || true # List nonexistent directory
+ls /home    # List home directory
+#all the above commands are executed and the output is displayed because of the set -x command
